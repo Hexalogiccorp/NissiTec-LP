@@ -1,0 +1,40 @@
+:root {
+  /*Navbar*/
+  --nav-bg: #2563eb;
+  /*Body*/
+  --body-bg: #ffff;
+  /*Footer*/
+  --foot-bg: #2563eb;
+  /*Titles*/
+  --title-color: #121213;
+  /*Text*/
+  --text-color: #4b5563;
+  /*Font*/
+  --font-family-base: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--body-bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4 {
+  color: var(--title-color);
+}
+p,
+span {
+  color: var(--text-color);
+}
