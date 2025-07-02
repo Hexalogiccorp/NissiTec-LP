@@ -1,0 +1,205 @@
+---
+// Datos de los logos
+const logos = [
+  {
+    id: 1,
+    name: "Microsoft",
+    src: "",
+    alt: "Logo #1",
+  },
+  {
+    id: 2,
+    name: "Google",
+    src: "",
+    alt: "Logo#2",
+  },
+  {
+    id: 3,
+    name: "Amazon",
+    src: "",
+    alt: "Logo #3",
+  },
+  {
+    id: 4,
+    name: "Apple",
+    src: "",
+    alt: "Logo #4",
+  },
+  {
+    id: 5,
+    name: "Netflix",
+    src: "",
+    alt: "Logo #5",
+  },
+  {
+    id: 6,
+    name: "Tesla",
+    src: "",
+    alt: "Logo #6",
+  },
+  {
+    id: 7,
+    name: "Meta",
+    src: "",
+    alt: "Logo #7",
+  },
+  {
+    id: 8,
+    name: "Spotify",
+    src: "",
+    alt: "Logo #8",
+  },
+
+  
+];
+---
+
+<section class="logo-carousel-section">
+  <div class="container">
+    <h2 class="title">Nuestros clientes</h2>
+
+    <div class="carousel-wrapper">
+      <!-- Gradientes para efecto de desvanecimiento -->
+      <div class="gradient-left"></div>
+      <div class="gradient-right"></div>
+
+      <!-- Contenedor del carrusel -->
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <!-- Primera serie de logos -->
+          {logos.map((logo) => (
+            <div class="logo-item">
+              <img
+                src={logo.src || "/placeholder.svg"}
+                alt={logo.alt}
+                class="logo-image"
+                loading="lazy"
+              />
+            </div>
+          ))}
+          <!-- Serie duplicada para efecto infinito -->
+          {logos.map((logo) => (
+            <div class="logo-item">
+              <img
+                src={logo.src || "/placeholder.svg"}
+                alt={logo.alt}
+                class="logo-image"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .logo-carousel-section {
+    padding: 4rem 0;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 3rem;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+  }
+
+  .gradient-left,
+  .gradient-right {
+    position: absolute;
+    top: 0;
+    width: 5rem;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .gradient-left {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+  }
+
+  .gradient-right {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+  }
+
+  .carousel-container {
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+  }
+
+  .carousel-track:hover {
+    animation-play-state: paused;
+  }
+
+  .logo-item {
+    flex-shrink: 0;
+    margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-image {
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+  }
+
+  .logo-image:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-item {
+      margin: 0 1rem;
+    }
+
+    .logo-image {
+      height: 2.5rem;
+    }
+
+    .carousel-track {
+      animation-duration: 20s;
+    }
+  }
+</style>
