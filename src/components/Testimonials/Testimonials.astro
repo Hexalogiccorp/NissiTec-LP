@@ -1,0 +1,137 @@
+---
+import TestimonialCards from "./TestimonialCards.astro";
+
+const testimonials = [
+  {
+    stars: 5,
+    testimonial:
+      "Very satisfied with the results. The delivery was fast and the quality of the product was excellent.",
+    clientName: "Laura Méndez",
+    clientRole: "Marketing Director at Creativa",
+  },
+  {
+    stars: 4,
+    testimonial:
+      "Very satisfied with the results. The delivery was fast and the quality of the product was excellent.",
+    clientName: "Carlos Rojas",
+    clientRole: "Founder of StartZone",
+  },
+  {
+    stars: 5,
+    testimonial:
+      "Very satisfied with the results. The delivery was fast and the quality of the product was excellent.",
+    clientName: "Elena López",
+    clientRole: "Product Manager at AppNest",
+  },
+  {
+    stars: 3,
+    testimonial:
+      "Good service overall, but we encountered some delays in the middle of the project.",
+    clientName: "Andrés García",
+    clientRole: "Operations Lead at LogiTrack",
+  },
+];
+// TestimonialsSection.astro
+---
+
+<section id="testimonios" class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      {
+        testimonials.map((element) => (
+          <TestimonialCards
+            stars={element.stars}
+            testimonial={element.testimonial}
+            clientName={element.clientName}
+            clientRole={element.clientRole}
+          />
+        ))
+      }
+
+      <!-- Testimonial 2 -->
+
+      <!-- Testimonial 3 -->
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    padding: 4rem 1rem;
+  }
+
+  .container {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 3rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .testimonials-section {
+      padding: 3rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.9rem;
+    }
+
+    .client-name {
+      font-size: 0.9rem;
+    }
+
+    .client-role {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .testimonials-section {
+      padding: 2rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+  }
+</style>
