@@ -1,16 +1,16 @@
 :root {
-  /*Navbar*/
-  --nav-bg: #2563eb;
   /*Body*/
   --body-bg: #ffff;
-  /*Footer*/
-  --foot-bg: #2563eb;
   /*Titles*/
-  --title-color: #121213;
+  --black: #121213;
   /*Text*/
   --text-color: #4b5563;
   /*Font*/
   --font-family-base: "Inter", sans-serif;
+  /*Hover effects*/
+  --hover-font: #e5b513;
+  /*btn-color*/
+  --btn-color: linear-gradient(90deg, rgba(250, 186, 10, 1) 0%, rgba(255, 221, 0, 1) 50%, rgba(250, 186, 10, 1) 100%);
 }
 
 * {
@@ -32,7 +32,7 @@ h2,
 h3,
 h4,
 h4 {
-  color: var(--title-color);
+  color: var(--black);
 }
 p,
 span {
