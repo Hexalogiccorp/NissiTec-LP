@@ -1,0 +1,168 @@
+<!-- Contact Form - Main Content -->
+<div class="contact-form-wrapper">
+  <form class="contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nombre" class="form-label">Nombre completo</label>
+        <input
+          id="nombre"
+          type="text"
+          placeholder="Tú nombre y apellidos"
+          class="form-input"
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Email</label>
+      <input
+        id="email"
+        type="email"
+        placeholder="tu@email.com"
+        class="form-input"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="telefono" class="form-label">Teléfono</label>
+      <input
+        id="telefono"
+        type="tel"
+        placeholder="(55) 1234-5678"
+        class="form-input"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="propiedad" class="form-label">Tipo de Propiedad</label>
+      <select id="propiedad" class="form-select">
+        <option value="">Selecciona una opción</option>
+        <option value="casa">Casa</option>
+        <option value="oficina">Oficina</option>
+        <option value="comercio">Comercio</option>
+        <option value="industria">Industria</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="mensaje" class="form-label">Mensaje</label>
+      <textarea
+        id="mensaje"
+        placeholder="Cuéntanos sobre tu proyecto de seguridad..."
+        class="form-textarea"
+        rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="submit-button"> Enviar Solicitud </button>
+  </form>
+</div>
+
+<style>
+  .contact-form-wrapper {
+    background-color: #ffff;
+    border-radius: 0.75rem;
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-label {
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    background-color: #ffff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    color: #111827;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: #9ca3af;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: #9ca3af;
+  }
+  .form-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    appearance: none;
+  }
+  .submit-button {
+    width: 100%;
+    background-color: var(--btn-primary-color);
+    color: #ffff;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .submit-button:hover {
+    background-color: #d4a815;
+    transform: translateY(-1px);
+  }
+
+  .submit-button:active {
+    transform: translateY(0);
+  }
+  .form-textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  @media (max-width: 767px) {
+    .contact-form-wrapper {
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .contact-form-wrapper {
+      padding: 1.5rem;
+    }
+    .form-input,
+    .form-select,
+    .form-textarea {
+      padding: 0.625rem;
+    }
+    .submit-button {
+      padding: 0.75rem 1rem;
+    }
+  }
+</style>
