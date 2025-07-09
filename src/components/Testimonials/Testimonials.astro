@@ -31,7 +31,6 @@ const testimonials = [
     clientRole: "Operations Lead at LogiTrack",
   },
 ];
-// TestimonialsSection.astro
 ---
 
 <section id="testimonios" class="testimonials-section">
@@ -39,7 +38,6 @@ const testimonials = [
     <h2 class="section-title">Lo que dicen nuestros clientes</h2>
 
     <div class="testimonials-grid">
-      <!-- Testimonial 1 -->
       {
         testimonials.map((element) => (
           <TestimonialCards
@@ -50,10 +48,6 @@ const testimonials = [
           />
         ))
       }
-
-      <!-- Testimonial 2 -->
-
-      <!-- Testimonial 3 -->
     </div>
   </div>
 </section>
@@ -84,7 +78,6 @@ const testimonials = [
     margin: 0 auto;
   }
 
-  /* Responsive Design */
   @media (min-width: 768px) {
     .testimonials-grid {
       grid-template-columns: repeat(2, 1fr);
