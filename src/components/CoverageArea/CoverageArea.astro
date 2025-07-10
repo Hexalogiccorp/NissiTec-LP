@@ -1,0 +1,59 @@
+<section class="coverage-areas">
+    <div class="coverage-text">
+        <h1>Nuestra presencia en Costa Rica</h1>
+        <p>
+            Seguridad NISSITEC nació en Limón, sin embargo, desde el comienzo de su operación se ha tenido como objetivo expandirse a otras áreas y/o provincias del país.
+        </p>
+    </div>
+    <div class="coverage-map">
+        <img src="../../../public/map.png" alt="Mapa de cobertura de NISSITEC" class="responsive-map">
+    </div>
+</section>
+
+<style>
+    .coverage-areas {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2vw;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .coverage-text {
+        max-width: 60%;
+    }
+
+    .coverage-text h1 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        margin-bottom: 1.5vw;
+        line-height: 1.3;
+        color: var(--black)
+    }
+
+    .coverage-text p {
+        font-size: clamp(0.9rem, 2vw, 1.2rem); 
+        line-height: 1.5;
+        color: var(--text-color);
+    }
+
+    .responsive-map {
+        width: 100%;
+        height: auto;
+        max-width: 1000px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 480px) {
+        .coverage-text h1 {
+            font-size: clamp(1.2rem, 5vw, 1.8rem);
+        }
+        
+        .coverage-text p {
+            font-size: clamp(0.8rem, 3vw, 1rem);
+        }
+    }
+</style>
