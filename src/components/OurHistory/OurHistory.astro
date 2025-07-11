@@ -1,0 +1,142 @@
+
+<section class="historia-section">
+  <div class="container">
+    <h2 class="section-title">Nuestra Historia</h2>
+    
+
+    <div class="historia-content">
+      <div class="historia-texto">
+        <p>
+          NissiTec es nuestro Departamento de Seguridad Electrónica, fundado en <span class="highlight">2020</span> con el objetivo de integrar tecnología moderna a nuestros servicios de seguridad física. Nace con una visión clara, ofrecer a nuestros clientes una solución completa y actualizada que combine lo mejor del recurso humano con lo más avanzado en sistemas electrónicos, todo bajo el respaldo de una sola empresa.
+        </p>
+        <p>
+          Nuestra misión es simple: <span class="highlight">proteger lo que más importa</span>. Con más de 20 años de experiencia, hemos desarrollado soluciones integrales que combinan tecnología avanzada con el factor humano que nos distingue.
+        </p>
+        <p>
+          Hoy contamos con un equipo de <span class="highlight">profesionales altamente capacitados</span> y la confianza de miles de clientes que han depositado en nosotros la seguridad de sus hogares y negocios.
+        </p>
+      </div>
+
+      <div class="stats-simple">
+        <div class="stat-box">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">Años de Experiencia</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Clientes Satisfechos</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Profesionales</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Monitoreo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+ .historia-section {
+    background: #ffffff;
+    color: #333;
+    padding: 80px 0;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 60px;
+  }
+
+  .historia-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .historia-texto {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+  }
+
+  .historia-texto p {
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    color: var(--hover-font);
+    font-weight: 600;
+  }
+
+  .stats-simple {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .stat-box {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--hover-font);
+    margin-bottom: 10px;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .historia-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .stats-simple {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
