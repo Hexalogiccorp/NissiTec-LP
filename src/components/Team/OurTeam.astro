@@ -1,0 +1,226 @@
+---
+// NuestroEquipo.astro
+---
+
+<section class="team-section">
+  <div class="container">
+    <h2 class="section-title">Nuestro Equipo</h2>
+    <p class="section-subtitle">Profesionales altamente capacitados comprometidos con tu seguridad</p>
+    
+    <div class="team-grid">
+      <div class="stat-box">
+        <div class="team-avatar">
+          <img src="/images/carlos-mendoza.jpg" alt="Carlos Mendoza" />
+        </div>
+        <div class="team-name">Carlos Mendoza</div>
+        <div class="team-position">Director General</div>
+        <div class="team-description">
+          15 años de experiencia en sistemas de seguridad.
+          Ingeniero en Telecomunicaciones.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="team-avatar">
+          <img src="/images/ana-garcia.jpg" alt="Ana García" />
+        </div>
+        <div class="team-name">Ana García</div>
+        <div class="team-position">Jefa Técnica</div>
+        <div class="team-description">
+          Especialista en instalaciones complejas. Certificada en
+          múltiples marcas de equipos.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="team-avatar">
+          <img src="/images/miguel-torres.jpg" alt="Miguel Torres" />
+        </div>
+        <div class="team-name">Miguel Torres</div>
+        <div class="team-position">Especialista en Ventas</div>
+        <div class="team-description">
+          Experto en asesoría personalizada. Ayuda a encontrar la
+          solución perfecta para cada cliente.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-section {
+    background-color: white;
+    padding: 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .stat-box {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 380px;
+    flex: 1;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  }
+
+  .team-avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .stat-box:hover .team-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+  }
+
+  .team-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0.5rem;
+  }
+
+  .team-position {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #FFD700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .team-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .team-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .stat-box {
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .team-section {
+      padding: 3rem 0;
+    }
+
+    .container {
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+    }
+
+    .team-grid {
+      gap: 1.5rem;
+    }
+
+    .stat-box {
+      padding: 2rem 1.5rem;
+      max-width: 100%;
+    }
+
+    .team-avatar {
+      width: 70px;
+      height: 70px;
+    }
+
+    .team-name {
+      font-size: 1.3rem;
+    }
+
+    .team-position {
+      font-size: 1rem;
+    }
+
+    .team-description {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .stat-box {
+      padding: 1.5rem 1rem;
+    }
+
+    .team-avatar {
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style>
