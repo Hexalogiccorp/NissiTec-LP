@@ -1,0 +1,481 @@
+<section class="hero-section">
+  <div class="hero-container">
+    <!-- Background Images Slider -->
+    <div class="hero-background">
+      <div class="slides-container">
+        <!-- Slide 1 -->
+        <div class="slide slide-active">
+          <img 
+            src="https://www.ikusi.com/mx/wp-content/uploads/sites/2/2022/12/ikusi_ikusi_image_403.jpg" 
+            alt="Técnico instalando sistema de seguridad" 
+            class="hero-image"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img 
+            src="https://nuc.edu/wp-content/uploads/2024/10/blog-seguridad-informatica.jpg" 
+            alt="Sistema de videovigilancia en funcionamiento" 
+            class="hero-image"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img 
+            src="https://www.channelpartner.es/wp-content/uploads/2025/06/AdobeStock_614759545-scaled-1.jpg" 
+            alt="Monitoreo de seguridad profesional" 
+            class="hero-image"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="nav-arrow nav-arrow-left" aria-label="Slide anterior">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15,18 9,12 15,6"></polyline>
+      </svg>
+    </button>
+
+    <button class="nav-arrow nav-arrow-right" aria-label="Siguiente slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9,18 15,12 9,6"></polyline>
+      </svg>
+    </button>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="content-wrapper">
+        <div class="content-slide content-active">
+          <h1 class="hero-title">Protegemos lo que más Importa</h1>
+          <p class="hero-subtitle">
+            Especialistas en instalación de sistemas de videovigilancia con 
+            tecnología de vanguardia para tu tranquilidad
+          </p>
+          <button class="hero-button">
+            Líderes en Seguridad
+          </button>
+        </div>
+        
+        <div class="content-slide">
+          <h1 class="hero-title">Tecnología de Vanguardia</h1>
+          <p class="hero-subtitle">
+            Sistemas de seguridad inteligentes con monitoreo 24/7 
+            para proteger lo que más valoras
+          </p>
+          <button class="hero-button">
+            Conoce Nuestros Sistemas
+          </button>
+        </div>
+        
+        <div class="content-slide">
+          <h1 class="hero-title">Tranquilidad Garantizada</h1>
+          <p class="hero-subtitle">
+            Más de 10 años de experiencia brindando soluciones de seguridad 
+            confiables para hogares y empresas
+          </p>
+          <button class="hero-button">
+            Solicita tu Cotización
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Indicators -->
+    <div class="slide-indicators">
+      <button class="indicator indicator-active" data-slide="0" aria-label="Ir al slide 1"></button>
+      <button class="indicator" data-slide="1" aria-label="Ir al slide 2"></button>
+      <button class="indicator" data-slide="2" aria-label="Ir al slide 3"></button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    min-height: 600px;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .slides-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+
+  .slide-active {
+    opacity: 1;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 8s ease-out;
+  }
+
+  .slide-active .hero-image {
+    transform: scale(1.05);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+  }
+
+  .nav-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .nav-arrow-left {
+    left: 2rem;
+  }
+
+  .nav-arrow-right {
+    right: 2rem;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .content-wrapper {
+    max-width: 48rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .content-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+  }
+
+  .content-active {
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+  }
+
+  .hero-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(59, 130, 246, 0.5);
+  }
+
+  .hero-button:active {
+    transform: translateY(0);
+  }
+
+  .slide-indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .indicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .indicator-active {
+    background-color: white;
+    transform: scale(1.2);
+  }
+
+  .indicator:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  @media (width<1003px) {
+  .nav-arrow-left, .nav-arrow-right{
+    display: none;
+  }
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-button {
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+    }
+
+    .nav-arrow {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .nav-arrow-left {
+      left: 1rem;
+    }
+
+    .nav-arrow-right {
+      right: 1rem;
+    }
+
+    .hero-content {
+      padding: 0 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-section {
+      min-height: 500px;
+    }
+
+    .hero-title {
+      font-size: 1.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-arrow {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .slide-indicators {
+      bottom: 1.5rem;
+    }
+
+    .indicator {
+      width: 0.625rem;
+      height: 0.625rem;
+    }
+  }
+
+</style>
+
+<script >
+ document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  const contentSlides = document.querySelectorAll('.content-slide');
+  const indicators = document.querySelectorAll('.indicator');
+  const leftArrow = document.querySelector('.nav-arrow-left');
+  const rightArrow = document.querySelector('.nav-arrow-right');
+  const heroSection = document.querySelector('.hero-section');
+
+  let currentSlide = 0;
+  let isTransitioning = false;
+
+  function goToSlide(slideIndex:number) {
+    if (isTransitioning || slideIndex === currentSlide) return;
+
+    isTransitioning = true;
+
+    slides[currentSlide].classList.remove('slide-active');
+    contentSlides[currentSlide].classList.remove('content-active');
+    indicators[currentSlide].classList.remove('indicator-active');
+
+    currentSlide = slideIndex;
+
+    slides[currentSlide].classList.add('slide-active');
+    contentSlides[currentSlide].classList.add('content-active');
+    indicators[currentSlide].classList.add('indicator-active');
+
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 800);
+  }
+
+  function nextSlide() {
+    const next = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+    goToSlide(next);
+  }
+
+  function prevSlide() {
+    const prev = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+    goToSlide(prev);
+  }
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      goToSlide(index);
+    });
+  });
+
+  leftArrow?.addEventListener('click', prevSlide);
+  rightArrow?.addEventListener('click', nextSlide);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      prevSlide();
+    } else if (e.key === 'ArrowRight') {
+      nextSlide();
+    }
+  });
+
+  // Auto-play
+  let autoPlayInterval = setInterval(nextSlide, 6000);
+
+  heroSection?.addEventListener('mouseenter', () => {
+    clearInterval(autoPlayInterval);
+  });
+
+  heroSection?.addEventListener('mouseleave', () => {
+    autoPlayInterval = setInterval(nextSlide, 6000);
+  });
+
+  [leftArrow, rightArrow, ...indicators].forEach(element => {
+    element?.addEventListener('click', () => {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = setInterval(nextSlide, 6000);
+    });
+  });
+
+  // 👇 Soporte para pantallas táctiles (swipe)
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+function handleTouchStart(e: Event) {
+  const touchEvent = e as TouchEvent;
+  touchStartX = touchEvent.changedTouches[0].screenX;
+}
+
+function handleTouchEnd(e: Event) {
+  const touchEvent = e as TouchEvent;
+  touchEndX = touchEvent.changedTouches[0].screenX;
+  handleSwipe();
+}
+
+heroSection?.addEventListener('touchstart', handleTouchStart);
+heroSection?.addEventListener('touchend', handleTouchEnd);
+
+  function handleSwipe() {
+    const swipeThreshold = 50; // píxeles mínimos para contar como swipe
+
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+      if (swipeDistance < 0) {
+        nextSlide(); // Swipe izquierda → siguiente
+      } else {
+        prevSlide(); // Swipe derecha → anterior
+      }
+
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = setInterval(nextSlide, 6000);
+    }
+  }
+});
+
+</script>
