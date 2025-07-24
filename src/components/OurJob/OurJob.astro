@@ -1,0 +1,151 @@
+---
+import OurJobCard from "./OurJobCard.astro";
+---
+
+<section id="trabajos" class="portfolio-section">
+  <div class="container">
+    <div class="header">
+      <h2 class="section-title">Nuestros Trabajos</h2>
+      <p class="section-subtitle">
+        Galería de instalaciones y proyectos realizados
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+      <OurJobCard
+        imageUrl="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/d9/fa/1b/lost-valley.jpg?w=1200&h=-1&s=1"
+        cardTitle="Instalación Residencial"
+        cardDescription="Sistema de seguridad completo"
+        alt="Instalación de cámaras de seguridad"
+      />
+      <OurJobCard
+        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
+        cardTitle="Instalación Residencial"
+        cardDescription="Sistema de seguridad completo"
+        alt="Instalación de cámaras de seguridad"
+      />
+      <OurJobCard
+        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
+        cardTitle="Instalación Residencial"
+        cardDescription="Sistema de seguridad completo"
+        alt="Instalación de cámaras de seguridad"
+      />
+      <OurJobCard
+        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
+        cardTitle="Instalación Residencial"
+        cardDescription="Sistema de seguridad completo"
+        alt="Instalación de cámaras de seguridad"
+      />
+      <OurJobCard
+        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
+        cardTitle="Instalación Residencial"
+        cardDescription="Sistema de seguridad completo"
+        alt="Instalación de cámaras de seguridad"
+      />
+      <OurJobCard
+        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
+        cardTitle="Instalación Residencial"
+        cardDescription="Sistema de seguridad completo"
+        alt="Instalación de cámaras de seguridad"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+
+
+  .portfolio-section {
+    padding: 4rem 1rem;
+  }
+
+  .container {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    color: var(--text-color);
+    font-size: 1.125rem;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
+
+
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .portfolio-section {
+      padding: 3rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+    }
+
+    .header {
+      margin-bottom: 2rem;
+    }
+
+    .portfolio-grid {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .portfolio-section {
+      padding: 2rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .portfolio-grid {
+      gap: 1rem;
+    }
+
+    .view-more-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
