@@ -1,18 +1,15 @@
----
-// NuestroEquipo.astro
----
-
 <section class="team-section">
   <div class="container">
     <h2 class="section-title">Nuestro Equipo</h2>
     <p class="section-subtitle">
-      Profesionales altamente capacitados comprometidos con tu seguridad
+      Equipo principal conformado por rofesionales altamente capacitados y
+      comprometidos con tu seguridad
     </p>
 
     <div class="team-grid">
       <div class="stat-box">
         <div class="team-avatar">
-          <img src="/images/carlos-mendoza.jpg" alt="Thomas Aguirre Cortés" />
+          <img src="/Thomas.png" alt="Thomas Aguirre Cortés" />
         </div>
         <div class="team-name">Sr. Thomas Aguirre Cortés</div>
         <div class="team-position">Fundador de Seguridad Táctica Nissi SA</div>
@@ -28,7 +25,7 @@
 
       <div class="stat-box">
         <div class="team-avatar">
-          <img src="/images/carlos-mendoza.jpg" alt="Byron Aguirre Mena" />
+          <img src="/Byron.png" alt="Byron Aguirre Mena" />
         </div>
         <div class="team-name">Téc. Byron Aguirre Mena</div>
         <div class="team-position">
@@ -44,7 +41,7 @@
 
       <div class="stat-box">
         <div class="team-avatar">
-          <img src="/images/ana-garcia.jpg" alt="Joshua Aguirre Mena" />
+          <img src="/joshua.png" alt="Joshua Aguirre Mena" />
         </div>
         <div class="team-name">Diplo. Joshua Aguirre Mena</div>
         <div class="team-position">
@@ -61,7 +58,7 @@
 
       <div class="stat-box">
         <div class="team-avatar">
-          <img src="/images/miguel-torres.jpg" alt="Sheyla Aguirre Mena" />
+          <img src="/Sheyla.png" alt="Sheyla Aguirre Mena" />
         </div>
         <div class="team-name">Diplo. Sheyla Aguirre Mena</div>
         <div class="team-position">
@@ -113,10 +110,13 @@
 
   .team-grid {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    align-items: stretch;
+  }
+
+  .team-grid > * {
+    flex: 0 1 calc(50% - 2rem);
   }
 
   .stat-box {
@@ -127,7 +127,7 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     width: 100%;
-    max-width: 380px;
+    max-width: 480px;
     flex: 1;
   }
 
@@ -137,9 +137,8 @@
   }
 
   .team-avatar {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #ffd700, #ffa500);
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -158,7 +157,7 @@
 
   .stat-box:hover .team-avatar {
     transform: scale(1.1);
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 8px 24px var(--btn-primary-color);
   }
 
   .team-name {
@@ -170,15 +169,15 @@
 
   .team-position {
     font-size: 1.1rem;
-    font-weight: 500;
-    color: #ffd700;
+    font-weight: bold;
+    color: var(--hover-font);
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
 
   .team-description {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #666;
     line-height: 1.6;
   }
