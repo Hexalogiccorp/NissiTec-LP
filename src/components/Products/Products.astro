@@ -151,13 +151,35 @@ const products = [
       }
     </div>
   </div>
+  <div class="product-buttton-container">
+    <a class="download-link">Descargar cátalogo de productos</a>
+  </div>
 </section>
 
 <style>
+  .product-buttton-container{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .download-link{
+    padding: 15px;
+    border-radius: 5px;
+    background-color:  red;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.download-link:hover {
+  transform: scale(1.1);
+}
   .badge-container{
     display: flex;
     justify-content: space-around;
     margin-bottom: 30px;
+    
   }
   .badge-1{
     position: absolute;
