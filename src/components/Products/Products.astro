@@ -1,48 +1,56 @@
 ---
+import Image from "astro/components/Image.astro";
+import product1 from "../../assets/product-1.png";
+import product2 from "../../assets/product-2.png";
+import product3 from "../../assets/product-3.png";
+import product4 from "../../assets/product-4.png";
+import product5 from "../../assets/product-5.png";
+import product6 from "../../assets/product-6.png";
+
 // Datos de los productos
 const products = [
   {
     id: 1,
-    name: "Cámara de seguridad IP 4K Full HD 360°",
-    model: "CCTV-4K-360",
-    image: "/products/camera-360.png",
-    alt: "Cámara de seguridad IP 4K 360 grados"
+    name: "Kit básico de 16 cámaras",
+    description: "Instalación incluida",
+    image: product1,
+    alt: "Cámara de seguridad IP 4K 360 grados",
   },
   {
     id: 2,
-    name: "Cámara de seguridad PTZ con zoom 20x",
-    model: "CCTV-PTZ-20X",
-    image: "/products/camera-ptz.png",
-    alt: "Cámara PTZ con zoom 20x"
+    name: "Kit básico de 2 cámaras",
+    description: "Instalación incluida",
+    image: product2,
+    alt: "Cámara PTZ con zoom 20x",
   },
   {
     id: 3,
-    name: "Sistema NVR 32 canales con almacenamiento",
-    model: "NVR-32CH-8TB",
-    image: "/products/nvr-system.png",
-    alt: "Sistema NVR 32 canales"
+    name: "Kit básico de 4 cámaras",
+    description: "Instalación incluida",
+    image: product3,
+    alt: "Sistema NVR 32 canales",
   },
   {
     id: 4,
-    name: "Cámara de seguridad Wi-Fi con app móvil",
-    model: "CCTV-WIFI-HD",
-    image: "/products/camera-wifi.png",
-    alt: "Cámara Wi-Fi con app móvil"
+    name: "Alarma Inalambrica",
+    description: "Instalación incluida",
+    image: product4,
+    alt: "Cámara Wi-Fi con app móvil",
   },
   {
     id: 5,
-    name: "Cámara domo discreta para interiores",
-    model: "CCTV-DOME-HD",
-    image: "/products/camera-dome.png",
-    alt: "Cámara domo para interiores"
+    name: "Kit básico de 6 cámaras",
+    description: "Instalación incluida",
+    image: product5,
+    alt: "Cámara domo para interiores",
   },
   {
     id: 6,
-    name: "Kit completo 4 cámaras + NVR + instalación",
-    model: "KIT-COMPLETE-4CH",
-    image: "/products/complete-kit.png",
-    alt: "Kit completo de 4 cámaras"
-  }
+    name: "Kit básico de 8 cámaras",
+    description: "Instalación incluida",
+    image: product6,
+    alt: "Kit completo de 4 cámaras",
+  },
 ];
 ---
 
@@ -51,37 +59,155 @@ const products = [
     <!-- Header -->
     <div class="header">
       <h2 class="title">Nuestros Productos</h2>
-      <p class="subtitle">Tecnología de vanguardia para cada necesidad de seguridad</p>
+      <p class="subtitle">
+        Tecnología de vanguardia para cada necesidad de seguridad
+      </p>
     </div>
 
     <!-- Products Grid -->
     <div class="products-grid">
-      {products.map((product) => (
-        <div class="product-card">
-          <div class="product-image-container">
-            <img
-              src={product.image || "/placeholder.svg"}
-              alt={product.alt}
-              class="product-image"
-              loading="lazy"
-            />
-          </div>
+      {
+        products.map((product) => (
+          <div class="product-card">
+            <span class="badge-1">1 año de garantía</span>
+            <div class="product-image-container">
+              <Image
+                src={product.image}
+                alt={product.alt}
+                class="product-image"
+                loading="lazy"
+              />
+            </div>
+            <div class="badge-container">
           
-          <div class="product-info">
-            <h3 class="product-name">{product.name}</h3>
-            <p class="product-model">{product.model}</p>
-            
-            <button class="request-info-btn" type="button">
-              Solicitar información
-            </button>
+            <span class="badge-2">Instalación incluida</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">{product.name}</h3>
+
+              <div class="footer-card-container">
+                <div class="card-text">
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" aria-label="Ícono celular rojo elegante" role="img" fill="none" stroke="#c53030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Cuerpo -->
+  <rect x="18" y="8" width="28" height="48" rx="6" ry="6" />
+  <!-- Pantalla -->
+  <rect x="24" y="14" width="16" height="36" rx="3" ry="3" />
+  <!-- Altavoz -->
+  <line x1="28" y1="10" x2="36" y2="10" />
+  <!-- Botón Inicio -->
+  <circle cx="32" cy="56" r="2" />
+  <!-- Cámara frontal -->
+  <circle cx="32" cy="11" r="1" />
+</svg>
+
+
+
+
+
+
+                  <span class="product-description">Acceso remoto</span>
+                </div>
+                 <div class="card-text">
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" aria-label="Ícono disco duro rojo" role="img" fill="none" stroke="#c53030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Cuerpo rectangular -->
+  <rect x="8" y="18" width="48" height="28" rx="5" ry="5" />
+  <!-- Plato circular -->
+  <circle cx="32" cy="32" r="12" />
+  <!-- Eje central -->
+  <circle cx="32" cy="32" r="3" />
+  <!-- Cabezal de lectura -->
+  <line x1="32" y1="32" x2="46" y2="22" />
+</svg>
+
+
+
+
+
+                  <span class="product-description">1TB</span>
+                </div>
+                  <div class="card-text">
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" aria-label="Icono cámara rojo elegante" role="img" fill="none" stroke="#c53030" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+  <!-- Cuerpo rectangular con bordes redondeados -->
+  <rect x="15" y="22" width="34" height="20" rx="4" ry="4" />
+  
+  <!-- Lente (círculo) -->
+  <circle cx="32" cy="32" r="9" />
+  
+  <!-- Lente interior (círculo relleno) -->
+  <circle cx="32" cy="32" r="5" fill="#c53030" stroke="none" />
+</svg>
+
+
+
+
+
+                  <span class="product-description">Cámara infrarroja</span>
+                </div>
+                
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
+  </div>
+  <div class="product-buttton-container">
+    <a class="download-link">Descargar cátalogo de productos</a>
   </div>
 </section>
 
 <style>
+  .product-buttton-container{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .download-link{
+    padding: 15px;
+    border-radius: 5px;
+    background-color:  red;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.download-link:hover {
+  transform: scale(1.1);
+}
+  .badge-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    
+  }
+  .badge-1{
+    position: absolute;
+    background-color: var(--btn-primary-color);
+    padding: 10px;
+    color: white;
+    font-size: 0.8rem;
+   
+    top: 0px;
+    left: 0px;
+
+  }
+   .badge-2{
+    background-color: var(--black);
+    padding: 8px;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .card-text{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-card-container {
+    display: flex;
+    gap: 15px;
+  }
   .products-section {
     padding: 5rem 0;
     background-color: #f8fafc;
@@ -114,13 +240,14 @@ const products = [
 
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
   }
 
   .product-card {
+    position: relative;
     background: white;
     border-radius: 12px;
     padding: 2rem;
@@ -128,6 +255,7 @@ const products = [
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border: 1px solid #e5e7eb;
+    overflow: hidden;
   }
 
   .product-card:hover {
@@ -164,33 +292,11 @@ const products = [
     margin: 0;
   }
 
-  .product-model {
+  .product-description {
     font-size: 0.875rem;
     color: #6b7280;
     font-weight: 500;
     margin: 0;
-  }
-
-  .request-info-btn {
-    background-color: var(--nav-bg);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-top: 0.5rem;
-  }
-
-  .request-info-btn:hover {
-    background-color: #3b82f6;
-    transform: translateY(-1px);
-  }
-
-  .request-info-btn:active {
-    transform: translateY(0);
   }
 
   /* Responsive */
@@ -235,4 +341,3 @@ const products = [
     }
   }
 </style>
-
