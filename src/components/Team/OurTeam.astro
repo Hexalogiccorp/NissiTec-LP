@@ -1,46 +1,74 @@
----
-// NuestroEquipo.astro
----
-
 <section class="team-section">
   <div class="container">
     <h2 class="section-title">Nuestro Equipo</h2>
-    <p class="section-subtitle">Profesionales altamente capacitados comprometidos con tu seguridad</p>
-    
+    <p class="section-subtitle">
+      Equipo principal conformado por rofesionales altamente capacitados y
+      comprometidos con tu seguridad
+    </p>
+
     <div class="team-grid">
       <div class="stat-box">
         <div class="team-avatar">
-          <img src="/images/carlos-mendoza.jpg" alt="Carlos Mendoza" />
+          <img src="/Thomas.png" alt="Thomas Aguirre Cortés" />
         </div>
-        <div class="team-name">Carlos Mendoza</div>
-        <div class="team-position">Director General</div>
+        <div class="team-name">Sr. Thomas Aguirre Cortés</div>
+        <div class="team-position">Fundador de Seguridad Táctica Nissi SA</div>
         <div class="team-description">
-          15 años de experiencia en sistemas de seguridad.
-          Ingeniero en Telecomunicaciones.
+          El señor Thomas Aguirre cuenta con una destacada trayectoria de más de
+          39 años en el ámbito de la seguridad y vigilancia. Su experiencia
+          incluye una sólida formación y desempeño en la Policía Militar,
+          Policía Nacional en la Quinta Comisaría, y como oficial de la Unidad
+          de Policía de Defensa (UPD), una fuerza especial operativa entre 1982
+          y 1994.
         </div>
       </div>
 
       <div class="stat-box">
         <div class="team-avatar">
-          <img src="/images/ana-garcia.jpg" alt="Ana García" />
+          <img src="/Byron.png" alt="Byron Aguirre Mena" />
         </div>
-        <div class="team-name">Ana García</div>
-        <div class="team-position">Jefa Técnica</div>
+        <div class="team-name">Téc. Byron Aguirre Mena</div>
+        <div class="team-position">
+          Técnico Principal del Departamento NissiTec
+        </div>
         <div class="team-description">
-          Especialista en instalaciones complejas. Certificada en
-          múltiples marcas de equipos.
+          Responsable de la dirección técnica del departamento de seguridad
+          electrónica de la empresa, el técnico Byron Aguirre se encarga de
+          supervisar la correcta ejecución de las instalaciones, mantenimiento
+          de equipos y seguimiento a los proyectos tecnológicos de NissiTec.
         </div>
       </div>
 
       <div class="stat-box">
         <div class="team-avatar">
-          <img src="/images/miguel-torres.jpg" alt="Miguel Torres" />
+          <img src="/joshua.png" alt="Joshua Aguirre Mena" />
         </div>
-        <div class="team-name">Miguel Torres</div>
-        <div class="team-position">Especialista en Ventas</div>
+        <div class="team-name">Diplo. Joshua Aguirre Mena</div>
+        <div class="team-position">
+          Encargado de Administración y Operaciones
+        </div>
         <div class="team-description">
-          Experto en asesoría personalizada. Ayuda a encontrar la
-          solución perfecta para cada cliente.
+          Estudiante avanzado de Administración de Empresas, Joshua Aguirre
+          lidera las áreas administrativas y operativas de Seguridad Táctica
+          Nissi SA y NissiTec. Su formación académica, combinada con su
+          experiencia en artes marciales (karate y defensa personal), le permite
+          brindar un enfoque integral en la asesoría a clientes y colaboradores.
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="team-avatar">
+          <img src="/Sheyla.png" alt="Sheyla Aguirre Mena" />
+        </div>
+        <div class="team-name">Diplo. Sheyla Aguirre Mena</div>
+        <div class="team-position">
+          Encargada de Recursos Humanos y Finanzas
+        </div>
+        <div class="team-description">
+          Actualmente cursando la carrera de Administración de Empresas, se
+          desempeña como responsable de las áreas de recursos humanos y
+          finanzas. Su compromiso con la excelencia y el orden administrativo
+          asegura el buen funcionamiento interno de la empresa.
         </div>
       </div>
     </div>
@@ -82,10 +110,13 @@
 
   .team-grid {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    align-items: stretch;
+  }
+
+  .team-grid > * {
+    flex: 0 1 calc(50% - 2rem);
   }
 
   .stat-box {
@@ -96,7 +127,7 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     width: 100%;
-    max-width: 380px;
+    max-width: 480px;
     flex: 1;
   }
 
@@ -106,9 +137,8 @@
   }
 
   .team-avatar {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #FFD700, #FFA500);
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -127,7 +157,7 @@
 
   .stat-box:hover .team-avatar {
     transform: scale(1.1);
-    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 8px 24px var(--btn-primary-color);
   }
 
   .team-name {
@@ -139,15 +169,15 @@
 
   .team-position {
     font-size: 1.1rem;
-    font-weight: 500;
-    color: #FFD700;
+    font-weight: bold;
+    color: var(--hover-font);
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
 
   .team-description {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #666;
     line-height: 1.6;
   }
@@ -158,7 +188,7 @@
       flex-direction: column;
       align-items: center;
     }
-    
+
     .stat-box {
       max-width: 400px;
     }
