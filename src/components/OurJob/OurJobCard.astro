@@ -1,9 +1,11 @@
 ---
-const { imageUrl, cardTitle, cardDescription, alt } = Astro.props;
+const { image, cardTitle, cardDescription, alt, position } = Astro.props;
+import Image from "astro/components/Image.astro";
+
 ---
 
 <div class="portfolio-item">
-  <img src={imageUrl} alt={alt} class="portfolio-image" />
+  <Image src={image} alt={alt} class="portfolio-image" style={`object-position: ${position};`} />
   <div class="portfolio-overlay">
     <div class="overlay-content">
       <h3 class="project-title">{cardTitle}</h3>
@@ -48,7 +50,7 @@ const { imageUrl, cardTitle, cardDescription, alt } = Astro.props;
     width: 100%;
     height: 250px;
     border-radius: 0.40rem;
-    object-fit: fit;
+    object-fit: cover;
     transition: transform 0.3s ease;
   }
 

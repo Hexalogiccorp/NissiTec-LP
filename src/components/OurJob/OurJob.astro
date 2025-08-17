@@ -1,5 +1,11 @@
 ---
 import OurJobCard from "./OurJobCard.astro";
+import job1 from "../../assets/Job-1.jpg";
+import job2 from "../../assets/Job-2.jpg";
+import job3 from "../../assets/Job-3.jpg";
+import job4 from "../../assets/Job-4.jpg";
+import job5 from "../../assets/Job-5.jpg";
+import job6 from "../../assets/Job-6.jpg";
 ---
 
 <section id="trabajos" class="portfolio-section">
@@ -13,48 +19,51 @@ import OurJobCard from "./OurJobCard.astro";
 
     <div class="portfolio-grid">
       <OurJobCard
-        imageUrl="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/d9/fa/1b/lost-valley.jpg?w=1200&h=-1&s=1"
-        cardTitle="Instalación Residencial"
-        cardDescription="Sistema de seguridad completo"
+        image={job1}
+        cardTitle="Instalación de vallado perimetral"
+        cardDescription="Montaje de cerca de seguridad para garantizar protección y control de acceso."
         alt="Instalación de cámaras de seguridad"
       />
       <OurJobCard
-        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
-        cardTitle="Instalación Residencial"
-        cardDescription="Sistema de seguridad completo"
+        image={job2}
+        cardTitle="Servicio de Seguridad para Eventos"
+        cardDescription="Supervisión y resguardo de áreas durante actividades y espectáculos."
         alt="Instalación de cámaras de seguridad"
+        position=""
       />
       <OurJobCard
-        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
-        cardTitle="Instalación Residencial"
-        cardDescription="Sistema de seguridad completo"
+        image={job3}
+        cardTitle="Instalación cámaras de seguridad"
+        cardDescription="Colocación de cámaras de seguridad para control y supervisión."
         alt="Instalación de cámaras de seguridad"
+        position=""
       />
       <OurJobCard
-        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
-        cardTitle="Instalación Residencial"
-        cardDescription="Sistema de seguridad completo"
+        image={job4}
+        cardTitle="Instalación y mantenimiento de sistemas de seguridad"
+        cardDescription="Un técnico de seguridad de la empresa realiza la instalación de equipos de red para garantizar la máxima protección."
         alt="Instalación de cámaras de seguridad"
+        position="top"
       />
       <OurJobCard
-        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
-        cardTitle="Instalación Residencial"
-        cardDescription="Sistema de seguridad completo"
+        image={job5}
+        cardTitle="Instalación cámaras de seguridad"
+        cardDescription="Montaje de sistema de videovigilancia con cámaras de alta resolución para control de espacios."
         alt="Instalación de cámaras de seguridad"
+        position="top"
       />
       <OurJobCard
-        imageUrl="https://www.vivosano.org/wp-content/uploads/2022/08/seguridad-en-el-trabajo-1024x683.jpg"
-        cardTitle="Instalación Residencial"
-        cardDescription="Sistema de seguridad completo"
+        image={job6}
+        cardTitle="Instalación cámaras de seguridad"
+        cardDescription="Colocación de cámaras de seguridad para control y supervisión."
         alt="Instalación de cámaras de seguridad"
+        position=""
       />
     </div>
   </div>
 </section>
 
 <style>
-
-
   .portfolio-section {
     padding: 4rem 1rem;
   }
@@ -91,7 +100,6 @@ import OurJobCard from "./OurJobCard.astro";
   .cta-section {
     text-align: center;
   }
-
 
   /* Responsive Design */
   @media (min-width: 768px) {
