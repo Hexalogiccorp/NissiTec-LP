@@ -22,10 +22,12 @@
 body {
   font-family: var(--font-family-base);
   background-color: var(--body-bg);
+
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 h1,

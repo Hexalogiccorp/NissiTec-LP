@@ -8,17 +8,17 @@
 
     <div class="nav-menu" id="nav-menu">
       <div class="nav-links">
-        <a href="/" class="nav-link">Inicio</a>
-        <a href="/nosotros" class="nav-link">Nosotros</a>
-        <a href="/equipo" class="nav-link">Equipo</a>
-        <a href="/productos" class="nav-link">Productos</a>
-        <a href="/contacto" class="nav-link">Contacto</a>
-        <a href="/cotizar" class="nav-btn mobile-only">Cotizar</a>
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#equipo" class="nav-link">Equipo</a>
+        <a href="#productos" class="nav-link">Productos</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+        <a href="#contacto" class="nav-btn mobile-only">Cotizar</a>
       </div>
     </div>
 
     <div class="nav-right">
-      <a href="/cotizar" class="nav-btn desktop-only">Cotizar</a>
+      <a href="#contacto" class="nav-btn desktop-only">Cotizar</a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Menú">
         <span class="hamburger-line line1"></span>
         <span class="hamburger-line line2"></span>
@@ -29,6 +29,7 @@
 
 <style>
   .navbar {
+    width: 100%;
     background-color: var(--black);
     height: 100px;
     z-index: 1000;
@@ -36,6 +37,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 5%; 
+    position: fixed;
   }
 
   .nav-logo {
@@ -169,6 +171,7 @@
       padding: 40px 20px;
       transition: left 0.3s ease;
       overflow-y: auto;
+      z-index: 10;
     }
 
     .nav-menu.active {
