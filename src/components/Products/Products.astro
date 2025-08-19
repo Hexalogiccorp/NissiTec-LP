@@ -54,7 +54,7 @@ const products = [
 ];
 ---
 
-<section class="products-section">
+<section class="products-section" id="productos">
   <div class="container">
     <!-- Header -->
     <div class="header">
@@ -99,12 +99,6 @@ const products = [
   <!-- Cámara frontal -->
   <circle cx="32" cy="11" r="1" />
 </svg>
-
-
-
-
-
-
                   <span class="product-description">Acceso remoto</span>
                 </div>
                  <div class="card-text">
@@ -118,32 +112,19 @@ const products = [
   <!-- Cabezal de lectura -->
   <line x1="32" y1="32" x2="46" y2="22" />
 </svg>
-
-
-
-
-
                   <span class="product-description">1TB</span>
                 </div>
                   <div class="card-text">
 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" aria-label="Icono cámara rojo elegante" role="img" fill="none" stroke="#c53030" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
   <!-- Cuerpo rectangular con bordes redondeados -->
   <rect x="15" y="22" width="34" height="20" rx="4" ry="4" />
-  
   <!-- Lente (círculo) -->
   <circle cx="32" cy="32" r="9" />
-  
   <!-- Lente interior (círculo relleno) -->
   <circle cx="32" cy="32" r="5" fill="#c53030" stroke="none" />
 </svg>
-
-
-
-
-
                   <span class="product-description">Cámara infrarroja</span>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -152,7 +133,13 @@ const products = [
     </div>
   </div>
   <div class="product-buttton-container">
-    <a class="download-link">Descargar cátalogo de productos</a>
+    <a class="download-link">
+     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+      viewBox="0 0 16 16" style="margin-right:8px;">
+      <path d="M.5 9.9V13a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V9.9a.5.5 0 0 0-1 0V13a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V9.9a.5.5 0 0 0-1 0z"/>
+      <path d="M7.646 10.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.293V1.5a.5.5 0 0 0-1 0v7.793L5.354 7.146a.5.5 0 1 0-.708.708l3 3z"/>
+    </svg>
+      Descargar cátalogo de productos</a>
   </div>
 </section>
 
@@ -170,7 +157,10 @@ const products = [
     color: white;
     border: none;
     cursor: pointer;
-  transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+     display: inline-flex;       
+  align-items: center;
+    
 }
 .download-link:hover {
   transform: scale(1.1);
