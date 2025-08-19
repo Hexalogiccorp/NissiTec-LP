@@ -1,3 +1,9 @@
+---
+import { Image } from 'astro:assets'
+import hero1 from '../../assets/Job-1.jpg'
+---
+
+
 <section class="hero-section" id="inicio">
   <div class="hero-container">
     <!-- Background Images Slider -->
@@ -5,8 +11,8 @@
       <div class="slides-container">
         <!-- Slide 1 -->
         <div class="slide slide-active">
-          <img 
-            src="https://www.ikusi.com/mx/wp-content/uploads/sites/2/2022/12/ikusi_ikusi_image_403.jpg" 
+          <Image
+            src={hero1}
             alt="Técnico instalando sistema de seguridad" 
             class="hero-image"
           />
