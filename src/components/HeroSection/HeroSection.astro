@@ -1,39 +1,36 @@
 ---
-import { Image } from 'astro:assets'
-import hero1 from '../../assets/Job-1.jpg'
+import { Image } from "astro:assets";
+import hero1 from "../../assets/Job-8.jpeg";
+import hero2 from "../../assets/Job-7.jpg";
+import hero3 from "../../assets/Job-1.jpg";
 ---
-
 
 <section class="hero-section" id="inicio">
   <div class="hero-container">
-    <!-- Background Images Slider -->
     <div class="hero-background">
       <div class="slides-container">
-        <!-- Slide 1 -->
         <div class="slide slide-active">
           <Image
             src={hero1}
-            alt="Técnico instalando sistema de seguridad" 
+            alt="Técnico instalando sistema de seguridad"
             class="hero-image"
           />
           <div class="hero-overlay"></div>
         </div>
-        
-        <!-- Slide 2 -->
+
         <div class="slide">
-          <img 
-            src="https://nuc.edu/wp-content/uploads/2024/10/blog-seguridad-informatica.jpg" 
-            alt="Sistema de videovigilancia en funcionamiento" 
+          <Image
+            src={hero2}
+            alt="Sistema de videovigilancia en funcionamiento"
             class="hero-image"
           />
           <div class="hero-overlay"></div>
         </div>
-        
-        <!-- Slide 3 -->
+
         <div class="slide">
-          <img 
-            src="https://www.channelpartner.es/wp-content/uploads/2025/06/AdobeStock_614759545-scaled-1.jpg" 
-            alt="Monitoreo de seguridad profesional" 
+          <Image
+            src={hero3}
+            alt="Monitoreo de seguridad profesional"
             class="hero-image"
           />
           <div class="hero-overlay"></div>
@@ -41,62 +38,72 @@ import hero1 from '../../assets/Job-1.jpg'
       </div>
     </div>
 
-    <!-- Navigation Arrows -->
     <button class="nav-arrow nav-arrow-left" aria-label="Slide anterior">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
         <polyline points="15,18 9,12 15,6"></polyline>
       </svg>
     </button>
 
     <button class="nav-arrow nav-arrow-right" aria-label="Siguiente slide">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
         <polyline points="9,18 15,12 9,6"></polyline>
       </svg>
     </button>
 
-    <!-- Hero Content -->
     <div class="hero-content">
       <div class="content-wrapper">
         <div class="content-slide content-active">
           <h1 class="hero-title">Protegemos lo que más Importa</h1>
           <p class="hero-subtitle">
-            Especialistas en instalación de sistemas de videovigilancia con 
+            Especialistas en instalación de sistemas de videovigilancia con
             tecnología de vanguardia para tu tranquilidad
           </p>
-          <button class="hero-button">
-            Líderes en Seguridad
-          </button>
+            <a href="#nosotros" class="hero-button"> Líderes en Seguridad </a>
         </div>
-        
+
         <div class="content-slide">
           <h1 class="hero-title">Tecnología de Vanguardia</h1>
           <p class="hero-subtitle">
-            Sistemas de seguridad inteligentes con monitoreo 24/7 
-            para proteger lo que más valoras
+            Sistemas de seguridad inteligentes con monitoreo 24/7 para proteger
+            lo que más valoras
           </p>
-          <button class="hero-button">
-            Conoce Nuestros Sistemas
-          </button>
+          <a href="#productos" class="hero-button"> Conoce Nuestros Sistemas </a>
         </div>
-        
+
         <div class="content-slide">
           <h1 class="hero-title">Tranquilidad Garantizada</h1>
           <p class="hero-subtitle">
-            Más de 10 años de experiencia brindando soluciones de seguridad 
+            Más de 10 años de experiencia brindando soluciones de seguridad
             confiables para hogares y empresas
           </p>
-          <button class="hero-button">
-            Solicita tu Cotización
-          </button>
+            <a href="#contacto" class="hero-button"> Solicita tu Cotización </a>
         </div>
       </div>
     </div>
 
-    <!-- Slide Indicators -->
     <div class="slide-indicators">
-      <button class="indicator indicator-active" data-slide="0" aria-label="Ir al slide 1"></button>
-      <button class="indicator" data-slide="1" aria-label="Ir al slide 2"></button>
-      <button class="indicator" data-slide="2" aria-label="Ir al slide 3"></button>
+      <button
+        class="indicator indicator-active"
+        data-slide="0"
+        aria-label="Ir al slide 1"></button>
+      <button class="indicator" data-slide="1" aria-label="Ir al slide 2"
+      ></button>
+      <button class="indicator" data-slide="2" aria-label="Ir al slide 3"
+      ></button>
     </div>
   </div>
 </section>
@@ -224,6 +231,7 @@ import hero1 from '../../assets/Job-1.jpg'
   .content-active {
     position: relative;
     opacity: 1;
+    z-index:10;
     transform: translateY(0);
   }
 
@@ -245,7 +253,8 @@ import hero1 from '../../assets/Job-1.jpg'
   }
 
   .hero-button {
-    background-color: #3b82f6;
+    text-decoration: none;
+    background-color: var(--btn-primary-color);
     color: white;
     padding: 1rem 2.5rem;
     border: none;
@@ -254,13 +263,13 @@ import hero1 from '../../assets/Job-1.jpg'
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+    box-shadow: 0 4px 14px 0 rgba(246, 224, 59, 0.39);
   }
 
   .hero-button:hover {
-    background-color: #2563eb;
+    background-color: var(--red);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px 0 rgba(59, 130, 246, 0.5);
+    box-shadow: 0 6px 20px 0 rgba(255, 0, 0, 0.448);
   }
 
   .hero-button:active {
@@ -297,9 +306,10 @@ import hero1 from '../../assets/Job-1.jpg'
   }
 
   @media (width<1003px) {
-  .nav-arrow-left, .nav-arrow-right{
-    display: none;
-  }
+    .nav-arrow-left,
+    .nav-arrow-right {
+      display: none;
+    }
   }
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -369,120 +379,118 @@ import hero1 from '../../assets/Job-1.jpg'
       height: 0.625rem;
     }
   }
-
 </style>
 
-<script >
- document.addEventListener('DOMContentLoaded', function() {
-  const slides = document.querySelectorAll('.slide');
-  const contentSlides = document.querySelectorAll('.content-slide');
-  const indicators = document.querySelectorAll('.indicator');
-  const leftArrow = document.querySelector('.nav-arrow-left');
-  const rightArrow = document.querySelector('.nav-arrow-right');
-  const heroSection = document.querySelector('.hero-section');
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    const contentSlides = document.querySelectorAll(".content-slide");
+    const indicators = document.querySelectorAll(".indicator");
+    const leftArrow = document.querySelector(".nav-arrow-left");
+    const rightArrow = document.querySelector(".nav-arrow-right");
+    const heroSection = document.querySelector(".hero-section");
 
-  let currentSlide = 0;
-  let isTransitioning = false;
+    let currentSlide = 0;
+    let isTransitioning = false;
 
-  function goToSlide(slideIndex:number) {
-    if (isTransitioning || slideIndex === currentSlide) return;
+    function goToSlide(slideIndex: number) {
+      if (isTransitioning || slideIndex === currentSlide) return;
 
-    isTransitioning = true;
+      isTransitioning = true;
 
-    slides[currentSlide].classList.remove('slide-active');
-    contentSlides[currentSlide].classList.remove('content-active');
-    indicators[currentSlide].classList.remove('indicator-active');
+      slides[currentSlide].classList.remove("slide-active");
+      contentSlides[currentSlide].classList.remove("content-active");
+      indicators[currentSlide].classList.remove("indicator-active");
 
-    currentSlide = slideIndex;
+      currentSlide = slideIndex;
 
-    slides[currentSlide].classList.add('slide-active');
-    contentSlides[currentSlide].classList.add('content-active');
-    indicators[currentSlide].classList.add('indicator-active');
+      slides[currentSlide].classList.add("slide-active");
+      contentSlides[currentSlide].classList.add("content-active");
+      indicators[currentSlide].classList.add("indicator-active");
 
-    setTimeout(() => {
-      isTransitioning = false;
-    }, 800);
-  }
-
-  function nextSlide() {
-    const next = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
-    goToSlide(next);
-  }
-
-  function prevSlide() {
-    const prev = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
-    goToSlide(prev);
-  }
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      goToSlide(index);
-    });
-  });
-
-  leftArrow?.addEventListener('click', prevSlide);
-  rightArrow?.addEventListener('click', nextSlide);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') {
-      prevSlide();
-    } else if (e.key === 'ArrowRight') {
-      nextSlide();
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 800);
     }
-  });
 
-  // Auto-play
-  let autoPlayInterval = setInterval(nextSlide, 6000);
+    function nextSlide() {
+      const next = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+      goToSlide(next);
+    }
 
-  heroSection?.addEventListener('mouseenter', () => {
-    clearInterval(autoPlayInterval);
-  });
+    function prevSlide() {
+      const prev = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+      goToSlide(prev);
+    }
 
-  heroSection?.addEventListener('mouseleave', () => {
-    autoPlayInterval = setInterval(nextSlide, 6000);
-  });
-
-  [leftArrow, rightArrow, ...indicators].forEach(element => {
-    element?.addEventListener('click', () => {
-      clearInterval(autoPlayInterval);
-      autoPlayInterval = setInterval(nextSlide, 6000);
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener("click", () => {
+        goToSlide(index);
+      });
     });
-  });
 
-  // 👇 Soporte para pantallas táctiles (swipe)
-  let touchStartX = 0;
-  let touchEndX = 0;
+    leftArrow?.addEventListener("click", prevSlide);
+    rightArrow?.addEventListener("click", nextSlide);
 
-function handleTouchStart(e: Event) {
-  const touchEvent = e as TouchEvent;
-  touchStartX = touchEvent.changedTouches[0].screenX;
-}
-
-function handleTouchEnd(e: Event) {
-  const touchEvent = e as TouchEvent;
-  touchEndX = touchEvent.changedTouches[0].screenX;
-  handleSwipe();
-}
-
-heroSection?.addEventListener('touchstart', handleTouchStart);
-heroSection?.addEventListener('touchend', handleTouchEnd);
-
-  function handleSwipe() {
-    const swipeThreshold = 50; // píxeles mínimos para contar como swipe
-
-    const swipeDistance = touchEndX - touchStartX;
-
-    if (Math.abs(swipeDistance) > swipeThreshold) {
-      if (swipeDistance < 0) {
-        nextSlide(); // Swipe izquierda → siguiente
-      } else {
-        prevSlide(); // Swipe derecha → anterior
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        prevSlide();
+      } else if (e.key === "ArrowRight") {
+        nextSlide();
       }
+    });
 
+    // Auto-play
+    let autoPlayInterval = setInterval(nextSlide, 6000);
+
+    heroSection?.addEventListener("mouseenter", () => {
       clearInterval(autoPlayInterval);
-      autoPlayInterval = setInterval(nextSlide, 6000);
-    }
-  }
-});
+    });
 
+    heroSection?.addEventListener("mouseleave", () => {
+      autoPlayInterval = setInterval(nextSlide, 6000);
+    });
+
+    [leftArrow, rightArrow, ...indicators].forEach((element) => {
+      element?.addEventListener("click", () => {
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = setInterval(nextSlide, 6000);
+      });
+    });
+
+    // 👇 Soporte para pantallas táctiles (swipe)
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function handleTouchStart(e: Event) {
+      const touchEvent = e as TouchEvent;
+      touchStartX = touchEvent.changedTouches[0].screenX;
+    }
+
+    function handleTouchEnd(e: Event) {
+      const touchEvent = e as TouchEvent;
+      touchEndX = touchEvent.changedTouches[0].screenX;
+      handleSwipe();
+    }
+
+    heroSection?.addEventListener("touchstart", handleTouchStart);
+    heroSection?.addEventListener("touchend", handleTouchEnd);
+
+    function handleSwipe() {
+      const swipeThreshold = 50; // píxeles mínimos para contar como swipe
+
+      const swipeDistance = touchEndX - touchStartX;
+
+      if (Math.abs(swipeDistance) > swipeThreshold) {
+        if (swipeDistance < 0) {
+          nextSlide(); // Swipe izquierda → siguiente
+        } else {
+          prevSlide(); // Swipe derecha → anterior
+        }
+
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = setInterval(nextSlide, 6000);
+      }
+    }
+  });
 </script>

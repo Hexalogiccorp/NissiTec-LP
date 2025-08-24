@@ -11,6 +11,8 @@
   --hover-font: #e5b513;
   /*btn-color*/
   --btn-primary-color:#e5b513;
+  /*red color*/
+  --red: red;
   --btn-color: linear-gradient(90deg, rgba(250, 186, 10, 1) 0%, rgba(255, 221, 0, 1) 50%, rgba(250, 186, 10, 1) 100%);
 }
 
